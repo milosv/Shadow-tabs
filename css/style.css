@@ -208,13 +208,13 @@ td { vertical-align: top; }
 
 
 /* ==|== primary styles =====================================================
-   Author: 
+   Author: Milos
    ========================================================================== */
 
 #main{
 	padding-top: 30px;
 }
-/*test for the stuff*/
+/*Nav that will hold the tabs*/
 nav{
 	width: 620px;
 	margin-left: auto;
@@ -229,6 +229,18 @@ a{
 	padding: 5px;
 	position: relative;
 }
+.box_shadow{
+	-webkit-box-shadow: 0px 0px 10px #999; 
+	   -moz-box-shadow: 0px 0px 10px #999; 
+	        box-shadow: 0px 0px 10px #999; 
+}
+.content{
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+}
+/*:after element is a box that covers main shadow */
 .cur:after{
 	content: "";
 	background-color: white;
@@ -240,6 +252,7 @@ a{
 	top: 20px;
 	z-index: 60;
 }
+/*:before is a box that covers bleed from the shadow that is wider than the element*/
 .cur:before{
 	content: "";
 	background-color: white;
@@ -250,6 +263,8 @@ a{
 	right: -5px;
 	z-index: 61;
 }
+
+/*this is a fix for the first link, special case because it the :before element bleeds over the edge*/
 .cur_first:after{
 	content: "";
 	background-color: white;
@@ -271,18 +286,6 @@ a{
 	right: -5px;
 	z-index: 61;
 }
-.box_shadow{
-	-webkit-box-shadow: 0px 0px 10px #999; 
-	   -moz-box-shadow: 0px 0px 10px #999; 
-	        box-shadow: 0px 0px 10px #999; 
-}
-.content{
-	width: 600px;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 10px;
-}
- 
 
 /* ==|== non-semantic helper classes ========================================
    Please define your styles before this section.
